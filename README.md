@@ -1,6 +1,6 @@
 # Storybook for Solid-js example
 
-This repo is an example of adoption storybook for solid-js.
+This repo is the example of adoption storybook for solid-js.
 
 Thanks to guys from this thread: https://github.com/solidjs/solid-docs-next/issues/35
 
