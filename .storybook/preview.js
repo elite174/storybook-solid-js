@@ -1,4 +1,26 @@
+/* @refresh reload */
+/**
+ * Don't forget the line above for HMR!
+ * 
+ * Note: for some reason HMR breaks if you change .stories file,
+ * however reloading the page fixes this issue
+ */ 
+
 import { render } from "solid-js/web";
+
+let disposeStory;
+
+export const decorators = [
+  (Story) => {
+    disposeStory?.();
+
+    const solidRoot = document.createElement("div");
+
+    disposeStory = render(Story, solidRoot);
+
+    return solidRoot;
+  },
+];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,24 +31,3 @@ export const parameters = {
     },
   },
 };
-
-let disposeStory;
-
-export const decorators = [
-  (Story) => {
-    if (disposeStory) {
-      disposeStory();
-    }
-
-    const root = document.getElementById("root");
-    const solidRoot = document.createElement("div");
-
-    solidRoot.setAttribute("id", "solid-root");
-    root.appendChild(solidRoot);
-
-    disposeStory = render(Story, solidRoot);
-
-    return solidRoot;
-    // return createRoot(() => Story()); // do not work correctly https://github.com/solidjs/solid/issues/553
-  },
-];

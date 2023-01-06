@@ -1,30 +1,31 @@
-import { Counter } from "../Counter.jsx";
-import type { Meta, StoryFn } from "@storybook/html";
+import { Counter, CounterProps } from "../Counter";
+
+import type { Meta, StoryObj } from "@storybook/html";
 import type { ComponentProps } from "solid-js";
 
-// Simple examples
-export const CounterDefault = () => <Counter />;
+type Story = StoryObj<CounterProps>;
 
-export const CounterWithProps = () => <Counter initialValue={123} />;
-
-// example with Template
-const Template = ((args) => <Counter {...args} />) as StoryFn<
-  ComponentProps<typeof Counter>
->;
-
-export const CounterTemplate = Template.bind({});
-
-CounterTemplate.args = {
-  initialValue: 10,
+export const Default: Story = {
+  args: {
+    initialValue: 12,
+    theme: "default",
+  },
 };
 
 export default {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/html/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
+  title: "Example/Counter",
+  tags: ["autodocs"],
+  /**
+   * Here you need to render JSX for HMR work!
+   *
+   * render: Counter won't trigger HMR updates
    */
-  title: "Counter",
+  render: (props) => <Counter {...props} />,
   argTypes: {
     initialValue: { control: "number" },
+    theme: {
+      options: ["default", "red"],
+      control: { type: "radio" },
+    },
   },
 } as Meta<ComponentProps<typeof Counter>>;

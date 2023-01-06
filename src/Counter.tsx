@@ -1,17 +1,24 @@
 import { createSignal } from "solid-js";
 import type { Component } from "solid-js";
 
-interface Props {
+export interface CounterProps {
   initialValue?: number;
+  theme?: "default" | "red";
 }
 
-export const Counter: Component<Props> = (props) => {
+export const Counter: Component<CounterProps> = (props) => {
   const [count, setCount] = createSignal(props.initialValue ?? 0);
+
+  const getColor = () => (props.theme === "red" ? "red" : "black");
 
   return (
     <div>
-      <button onClick={() => setCount((c) => c + 1)}>Click</button>{" "}
-      <span>{count()}</span>
+      <button
+        style={{ color: getColor() }}
+        onClick={() => setCount((c) => c + 1)}
+      >
+        Click <span>{count()}</span>
+      </button>
     </div>
   );
 };
