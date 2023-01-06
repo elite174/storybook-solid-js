@@ -81,7 +81,7 @@ export const parameters = {
 
 To make HMR work for your component you need to render it as JSX:
 
-```js
+```tsx
 // Correct! HMR works!
 // Let's assume that this is storybook meta object
 export default {
@@ -93,7 +93,7 @@ export default {
 
 If you write the code like this, it won't work:
 
-```js
+```tsx
 // Wrong! HMR doesn't work!
 // Let's assume that this is storybook meta object
 export default {
@@ -105,7 +105,7 @@ export default {
 
 Here's an example story for `Counter` component.
 
-```js
+```tsx
 import { Counter, CounterProps } from "../Counter";
 
 import type { Meta, StoryObj } from "@storybook/html";
