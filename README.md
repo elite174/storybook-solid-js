@@ -142,6 +142,8 @@ export default {
 
 ### Storybook v6
 
+To see the files for the storybook v6 see [THIS](https://github.com/elite174/storybook-solid-js/tree/16466f35def5ebe4b28603211d8d825d690fbe40).
+
 #### 1. Initialize storybook in your repo as [html project](https://storybook.js.org/docs/html/get-started/install):
 
 ```
