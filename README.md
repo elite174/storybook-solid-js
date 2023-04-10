@@ -8,8 +8,6 @@ Thanks to guys from this thread: https://github.com/solidjs/solid-docs-next/issu
 
 ### Storybook v7
 
-Let's assume that you've migrated to storybook v7.
-
 You need to change the following files.
 
 **1. .storybook/main.js**

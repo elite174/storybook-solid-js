@@ -1,7 +1,8 @@
-import { Counter, CounterProps } from "../Counter";
-
 import type { Meta, StoryObj } from "@storybook/html";
 import type { ComponentProps } from "solid-js";
+
+import { Counter } from "../Counter";
+import type { CounterProps } from "../Counter";
 
 type Story = StoryObj<CounterProps>;
 
