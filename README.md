@@ -46,15 +46,11 @@ See the details below.
 
 import { render } from "solid-js/web";
 
-let disposeStory;
-
 export const decorators = [
   (Story) => {
-    disposeStory?.();
-
     const solidRoot = document.createElement("div");
 
-    disposeStory = render(Story, solidRoot);
+    render(Story, solidRoot);
 
     return solidRoot;
   },

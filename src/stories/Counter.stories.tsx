@@ -13,6 +13,18 @@ export const Default: Story = {
   },
 };
 
+export const Second: Story = {
+  args: {
+    initialValue: 35,
+  },
+};
+
+export const Thrid: Story = {
+  args: {
+    initialValue: 3225,
+  },
+};
+
 export default {
   title: "Example/Counter",
   tags: ["autodocs"],
