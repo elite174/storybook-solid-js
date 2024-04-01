@@ -13,22 +13,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.5",
-    "@storybook/addon-interactions": "^7.0.5",
-    "@storybook/addon-links": "^7.0.5",
-    "@storybook/addon-mdx-gfm": "^7.0.5",
-    "@storybook/blocks": "^7.0.5",
-    "@storybook/html": "^7.0.5",
-    "@storybook/html-vite": "^7.0.5",
-    "@storybook/testing-library": "^0.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "storybook": "^7.0.5",
-    "typescript": "^5.0.4",
-    "vite": "^4.2.1",
-    "vite-plugin-solid": "^2.7.0"
+    "@storybook/addon-essentials": "8.0.5",
+    "@storybook/addon-interactions": "8.0.5",
+    "@storybook/addon-links": "8.0.5",
+    "@storybook/blocks": "8.0.5",
+    "storybook": "8.0.5",
+    "storybook-solidjs": "1.0.0-beta.2",
+    "storybook-solidjs-vite": "1.0.0-beta.2",
+    "typescript": "5.4.3",
+    "vite": "5.2.7",
+    "vite-plugin-solid": "2.10.2"
   },
   "dependencies": {
-    "solid-js": "^1.7.3"
+    "solid-js": "1.8.16"
   }
 }

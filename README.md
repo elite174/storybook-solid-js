@@ -1,16 +1,14 @@
 # Storybook for Solid-js example
 
-## ATTENTION
-
-Solid is now supported by storybook, so firstly check this link: https://storybook.js.org/docs/solid/get-started/install/
-
-##
-
 This repo is the example of adoption storybook for solid-js.
 
 Thanks to guys from this thread: https://github.com/solidjs/solid-docs-next/issues/35
 
 ## Instructions
+
+### Storybook v8
+
+Everything works out of the box. Don't forget to render JSX component in your story file to make HMR work (see `Counter.stories.tsx` file).
 
 ### Storybook v7
 

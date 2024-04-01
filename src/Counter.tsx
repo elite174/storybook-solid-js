@@ -17,7 +17,7 @@ export const Counter: Component<CounterProps> = (props) => {
         style={{ color: getColor() }}
         onClick={() => setCount((c) => c + 1)}
       >
-        Click <span>{count()}</span>
+        Click! <span>{count()}</span>
       </button>
     </div>
   );
