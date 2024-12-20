@@ -8,7 +8,36 @@ Thanks to guys from this thread: https://github.com/solidjs/solid-docs-next/issu
 
 ### Storybook v8
 
-Everything works out of the box. Don't forget to render JSX component in your story file to make HMR work (see `Counter.stories.tsx` file).
+~~Everything works out of the box~~. Don't forget to render JSX component in your story file to make HMR work (see `Counter.stories.tsx` file).
+
+Solid works the best with storybook with @storybook/html-vite configuration. So init your storybook project with HTML type and add the following code:
+
+preview.js
+```ts
+export const decorators = [
+  (Story) => {
+    const solidRoot = document.createElement("div");
+
+    render(Story, solidRoot);
+
+    return solidRoot;
+  },
+];
+```
+
+main.js
+```ts
+export const config = {
+  // some default fields
+  // ...
+  viteFinal(config) {
+    // make solid work
+    config.plugins?.unshift(solid({ hot: false }));
+
+    return config;
+  }
+};
+```
 
 ### Storybook v7
 
